@@ -93,6 +93,14 @@
 				5552472A2AFA9A680052EF94 /* LaunchScreen.storyboard */,
 				5552472D2AFA9A680052EF94 /* Info.plist */,
 				555247592AFBBD520052EF94 /* Date+Extension.swift */,
+				5552475F2AFBD42D0052EF94 /* ITunes */,
+			);
+			path = "iTunes Search API";
+			sourceTree = "<group>";
+		};
+		5552475F2AFBD42D0052EF94 /* ITunes */ = {
+			isa = PBXGroup;
+			children = (
 				555247232AFA9A670052EF94 /* ITunesViewController.swift */,
 				555247402AFA9B4F0052EF94 /* ITunesView.swift */,
 				555247422AFA9FB90052EF94 /* ITunesTableViewCell.swift */,
@@ -101,7 +109,7 @@
 				5552474B2AFAA1940052EF94 /* ITunes.swift */,
 				555247542AFBAE780052EF94 /* ITunesTest.json */,
 			);
-			path = "iTunes Search API";
+			path = ITunes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
