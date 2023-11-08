@@ -9,21 +9,43 @@
 /* Begin PBXBuildFile section */
 		555247202AFA9A670052EF94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5552471F2AFA9A670052EF94 /* AppDelegate.swift */; };
 		555247222AFA9A670052EF94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555247212AFA9A670052EF94 /* SceneDelegate.swift */; };
-		555247242AFA9A670052EF94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555247232AFA9A670052EF94 /* ViewController.swift */; };
+		555247242AFA9A670052EF94 /* ITunesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555247232AFA9A670052EF94 /* ITunesViewController.swift */; };
 		555247272AFA9A670052EF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555247252AFA9A670052EF94 /* Main.storyboard */; };
 		555247292AFA9A680052EF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555247282AFA9A680052EF94 /* Assets.xcassets */; };
 		5552472C2AFA9A680052EF94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5552472A2AFA9A680052EF94 /* LaunchScreen.storyboard */; };
+		555247352AFA9A840052EF94 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 555247342AFA9A840052EF94 /* RxCocoa */; };
+		555247372AFA9A840052EF94 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 555247362AFA9A840052EF94 /* RxRelay */; };
+		555247392AFA9A840052EF94 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 555247382AFA9A840052EF94 /* RxSwift */; };
+		5552473C2AFA9A8F0052EF94 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5552473B2AFA9A8F0052EF94 /* SnapKit */; };
+		5552473F2AFA9A9F0052EF94 /* JimmyKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5552473E2AFA9A9F0052EF94 /* JimmyKit */; };
+		555247412AFA9B4F0052EF94 /* ITunesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555247402AFA9B4F0052EF94 /* ITunesView.swift */; };
+		555247432AFA9FB90052EF94 /* ITunesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555247422AFA9FB90052EF94 /* ITunesTableViewCell.swift */; };
+		555247452AFAA10B0052EF94 /* ITunesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555247442AFAA10B0052EF94 /* ITunesViewModel.swift */; };
+		555247472AFAA13B0052EF94 /* ITunesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555247462AFAA13B0052EF94 /* ITunesService.swift */; };
+		5552474A2AFAA1530052EF94 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 555247492AFAA1530052EF94 /* Alamofire */; };
+		5552474C2AFAA1940052EF94 /* ITunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5552474B2AFAA1940052EF94 /* ITunes.swift */; };
+		555247552AFBAE780052EF94 /* ITunesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 555247542AFBAE780052EF94 /* ITunesTest.json */; };
+		555247582AFBBA8E0052EF94 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 555247572AFBBA8E0052EF94 /* RxDataSources */; };
+		5552475A2AFBBD520052EF94 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555247592AFBBD520052EF94 /* Date+Extension.swift */; };
+		5552475D2AFBBE220052EF94 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5552475C2AFBBE220052EF94 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5552471C2AFA9A670052EF94 /* iTunes Search API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes Search API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5552471F2AFA9A670052EF94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		555247212AFA9A670052EF94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		555247232AFA9A670052EF94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		555247232AFA9A670052EF94 /* ITunesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesViewController.swift; sourceTree = "<group>"; };
 		555247262AFA9A670052EF94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		555247282AFA9A680052EF94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5552472B2AFA9A680052EF94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5552472D2AFA9A680052EF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		555247402AFA9B4F0052EF94 /* ITunesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesView.swift; sourceTree = "<group>"; };
+		555247422AFA9FB90052EF94 /* ITunesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesTableViewCell.swift; sourceTree = "<group>"; };
+		555247442AFAA10B0052EF94 /* ITunesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesViewModel.swift; sourceTree = "<group>"; };
+		555247462AFAA13B0052EF94 /* ITunesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesService.swift; sourceTree = "<group>"; };
+		5552474B2AFAA1940052EF94 /* ITunes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunes.swift; sourceTree = "<group>"; };
+		555247542AFBAE780052EF94 /* ITunesTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ITunesTest.json; sourceTree = "<group>"; };
+		555247592AFBBD520052EF94 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +53,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555247392AFA9A840052EF94 /* RxSwift in Frameworks */,
+				5552473C2AFA9A8F0052EF94 /* SnapKit in Frameworks */,
+				5552473F2AFA9A9F0052EF94 /* JimmyKit in Frameworks */,
+				5552474A2AFAA1530052EF94 /* Alamofire in Frameworks */,
+				5552475D2AFBBE220052EF94 /* Kingfisher in Frameworks */,
+				555247582AFBBA8E0052EF94 /* RxDataSources in Frameworks */,
+				555247372AFA9A840052EF94 /* RxRelay in Frameworks */,
+				555247352AFA9A840052EF94 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,11 +88,18 @@
 			children = (
 				5552471F2AFA9A670052EF94 /* AppDelegate.swift */,
 				555247212AFA9A670052EF94 /* SceneDelegate.swift */,
-				555247232AFA9A670052EF94 /* ViewController.swift */,
 				555247252AFA9A670052EF94 /* Main.storyboard */,
 				555247282AFA9A680052EF94 /* Assets.xcassets */,
 				5552472A2AFA9A680052EF94 /* LaunchScreen.storyboard */,
 				5552472D2AFA9A680052EF94 /* Info.plist */,
+				555247592AFBBD520052EF94 /* Date+Extension.swift */,
+				555247232AFA9A670052EF94 /* ITunesViewController.swift */,
+				555247402AFA9B4F0052EF94 /* ITunesView.swift */,
+				555247422AFA9FB90052EF94 /* ITunesTableViewCell.swift */,
+				555247442AFAA10B0052EF94 /* ITunesViewModel.swift */,
+				555247462AFAA13B0052EF94 /* ITunesService.swift */,
+				5552474B2AFAA1940052EF94 /* ITunes.swift */,
+				555247542AFBAE780052EF94 /* ITunesTest.json */,
 			);
 			path = "iTunes Search API";
 			sourceTree = "<group>";
@@ -83,6 +120,16 @@
 			dependencies = (
 			);
 			name = "iTunes Search API";
+			packageProductDependencies = (
+				555247342AFA9A840052EF94 /* RxCocoa */,
+				555247362AFA9A840052EF94 /* RxRelay */,
+				555247382AFA9A840052EF94 /* RxSwift */,
+				5552473B2AFA9A8F0052EF94 /* SnapKit */,
+				5552473E2AFA9A9F0052EF94 /* JimmyKit */,
+				555247492AFAA1530052EF94 /* Alamofire */,
+				555247572AFBBA8E0052EF94 /* RxDataSources */,
+				5552475C2AFBBE220052EF94 /* Kingfisher */,
+			);
 			productName = "iTunes Search API";
 			productReference = 5552471C2AFA9A670052EF94 /* iTunes Search API.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +158,14 @@
 				Base,
 			);
 			mainGroup = 555247132AFA9A670052EF94;
+			packageReferences = (
+				555247332AFA9A840052EF94 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				5552473A2AFA9A8F0052EF94 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				5552473D2AFA9A9F0052EF94 /* XCRemoteSwiftPackageReference "JimmyKit" */,
+				555247482AFAA1530052EF94 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				555247562AFBBA8E0052EF94 /* XCRemoteSwiftPackageReference "RxDataSources" */,
+				5552475B2AFBBE220052EF94 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 5552471D2AFA9A670052EF94 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +183,7 @@
 				5552472C2AFA9A680052EF94 /* LaunchScreen.storyboard in Resources */,
 				555247292AFA9A680052EF94 /* Assets.xcassets in Resources */,
 				555247272AFA9A670052EF94 /* Main.storyboard in Resources */,
+				555247552AFBAE780052EF94 /* ITunesTest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +194,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				555247242AFA9A670052EF94 /* ViewController.swift in Sources */,
+				555247242AFA9A670052EF94 /* ITunesViewController.swift in Sources */,
 				555247202AFA9A670052EF94 /* AppDelegate.swift in Sources */,
+				555247412AFA9B4F0052EF94 /* ITunesView.swift in Sources */,
+				555247472AFAA13B0052EF94 /* ITunesService.swift in Sources */,
+				555247432AFA9FB90052EF94 /* ITunesTableViewCell.swift in Sources */,
+				555247452AFAA10B0052EF94 /* ITunesViewModel.swift in Sources */,
 				555247222AFA9A670052EF94 /* SceneDelegate.swift in Sources */,
+				5552474C2AFAA1940052EF94 /* ITunes.swift in Sources */,
+				5552475A2AFBBD520052EF94 /* Date+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +420,100 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		555247332AFA9A840052EF94 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		5552473A2AFA9A8F0052EF94 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		5552473D2AFA9A9F0052EF94 /* XCRemoteSwiftPackageReference "JimmyKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Jimmy-Jung/JimmyKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		555247482AFAA1530052EF94 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		555247562AFBBA8E0052EF94 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		5552475B2AFBBE220052EF94 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		555247342AFA9A840052EF94 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 555247332AFA9A840052EF94 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		555247362AFA9A840052EF94 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 555247332AFA9A840052EF94 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		555247382AFA9A840052EF94 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 555247332AFA9A840052EF94 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		5552473B2AFA9A8F0052EF94 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5552473A2AFA9A8F0052EF94 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		5552473E2AFA9A9F0052EF94 /* JimmyKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5552473D2AFA9A9F0052EF94 /* XCRemoteSwiftPackageReference "JimmyKit" */;
+			productName = JimmyKit;
+		};
+		555247492AFAA1530052EF94 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 555247482AFAA1530052EF94 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		555247572AFBBA8E0052EF94 /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 555247562AFBBA8E0052EF94 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
+		};
+		5552475C2AFBBE220052EF94 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5552475B2AFBBE220052EF94 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 555247142AFA9A670052EF94 /* Project object */;
 }
