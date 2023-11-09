@@ -9,7 +9,7 @@ import Foundation
 import RxDataSources
 
 // MARK: - Welcome
-struct iTunseResults: Codable {
+struct ITunseResults: Codable {
     let resultCount: Int
     var results: [ITunes]
 }

@@ -24,6 +24,7 @@ class ITunesViewController: UIViewController {
     let iTunesviewModel = ITunesViewModel(iTunesService: ITunesService_Test())
     let iTunesView = ITunesView()
     let disposeBag = DisposeBag()
+    let searchBar = UISearchController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,10 @@ class ITunesViewController: UIViewController {
     }
     
     private func configureUI() {
+        navigationItem.title = "검색"
+        
+        searchBar.searchBar.placeholder = "게임, 앱, 스토리 등"
+        navigationItem.searchController = searchBar
         view.backgroundColor(.systemBackground)
         view.addSubview(iTunesView)
         iTunesView.tableView.register(ITunesTableViewCell.self, forCellReuseIdentifier: ITunesTableViewCell.identifier)
@@ -43,15 +48,23 @@ class ITunesViewController: UIViewController {
     
     private func bind() {
         let input = ITunesViewModel
-            .Input(searchButtonTapped: iTunesView.searchBar.rx.searchButtonClicked, searchBarText: iTunesView.searchBar.rx.text.orEmpty)
+            .Input(
+                searchButtonTapped: searchBar.searchBar.rx.searchButtonClicked,
+                searchBarText: searchBar.searchBar.rx.text.orEmpty
+                )
         
         let output = iTunesviewModel.transform(input: input)
+        
         output.items
             .map {
                 print($0)
                 return [ITunesModel(items: $0.results)]
             }
             .bind(to: iTunesView.tableView.rx.items(dataSource: datasource))
+            .disposed(by: disposeBag)
+        
+        output.searchBarPlaceHolder
+            .bind(to: searchBar.searchBar.rx.placeholder)
             .disposed(by: disposeBag)
         
     }

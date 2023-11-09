@@ -9,9 +9,6 @@ import UIKit
 import SnapKit
 
 final class ITunesView: UIView {
-    let searchBar = UISearchBar().builder
-        .placeholder("검색어를 입력하세요.")
-        .build()
     
     let tableView = UITableView()
     
@@ -21,17 +18,9 @@ final class ITunesView: UIView {
     }
     
     func configureUI() {
-        self.addSubview(searchBar)
         self.addSubview(tableView)
-        
-        searchBar.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide.snp.top)
-            make.leading.trailing.equalToSuperview()
-        }
-        
         tableView.snp.makeConstraints { make in
-            make.top.equalTo(searchBar.snp.bottom)
-            make.leading.trailing.bottom.equalToSuperview()
+            make.edges.equalToSuperview()
         }
     }
     required init?(coder: NSCoder) {

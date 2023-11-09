@@ -51,7 +51,7 @@ final class ITunesTableViewCell: UITableViewCell {
         artworkImageView.snp.makeConstraints { make in
             make.top.leading.equalToSuperview().offset(10)
             make.bottom.equalToSuperview().offset(-10)
-            make.width.equalTo(artworkImageView.snp.height)
+            make.size.equalTo(100)
         }
         
         stackView.snp.makeConstraints { make in

@@ -25,7 +25,8 @@ final class ITunesViewModel: ViewModelType {
     }
     
     struct Output {
-        let items: PublishSubject<iTunseResults>
+        let items: PublishSubject<ITunseResults>
+        let searchBarPlaceHolder: PublishRelay<String>
     }
     
     let iTunesService: ITunesServiceProtocol
@@ -35,13 +36,13 @@ final class ITunesViewModel: ViewModelType {
         self.iTunesService = iTunesService
     }
     
-    func getTunesData(term: String) -> Observable<iTunseResults> {
+    func getTunesData(term: String) -> Observable<ITunseResults> {
         return iTunesService.fetchITunesData(with: term)
     }
     
     func transform(input: Input) -> Output {
-        let iTunesList = PublishSubject<iTunseResults>()
-        
+        let iTunesList = PublishSubject<ITunseResults>()
+        let searchBarPlaceHolder = PublishRelay<String>()
         fetchITunesDateWhenSearchButtonTapped(input: input)
             .subscribe(
                 with: self,
@@ -54,11 +55,18 @@ final class ITunesViewModel: ViewModelType {
             )
             .disposed(by: disposeBag)
         
-        return Output(items: iTunesList)
+        input
+            .searchBarText
+            .changed
+            .map { $0.isEmpty ? "게임, 앱, 스토리 등" : ""}
+            .bind(to: searchBarPlaceHolder)
+            .disposed(by: disposeBag)
+        
+        return Output(items: iTunesList, searchBarPlaceHolder: searchBarPlaceHolder)
         
     }
     
-    func fetchITunesDateWhenSearchButtonTapped(input: Input) -> Observable<iTunseResults> {
+    func fetchITunesDateWhenSearchButtonTapped(input: Input) -> Observable<ITunseResults> {
         return Observable.zip(input.searchButtonTapped, input.searchBarText)
             .withUnretained(self)
             .flatMap { owner, value in
