@@ -67,10 +67,11 @@ final class ITunesViewModel: ViewModelType {
     }
     
     func fetchITunesDateWhenSearchButtonTapped(input: Input) -> Observable<ITunseResults> {
-        return Observable.zip(input.searchButtonTapped, input.searchBarText)
+        return Observable.combineLatest(input.searchButtonTapped, input.searchBarText)
             .withUnretained(self)
             .flatMap { owner, value in
-                owner.iTunesService.fetchITunesData(with: value.1)
+                print(value)
+                return owner.iTunesService.fetchITunesData(with: value.1)
             }
     }
 }

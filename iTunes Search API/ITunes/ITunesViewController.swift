@@ -21,7 +21,7 @@ extension ITunesModel {
     }
 }
 class ITunesViewController: UIViewController {
-    let iTunesviewModel = ITunesViewModel(iTunesService: ITunesService_Test())
+    let iTunesviewModel = ITunesViewModel(iTunesService: ITunesService())
     let iTunesView = ITunesView()
     let disposeBag = DisposeBag()
     let searchBar = UISearchController()

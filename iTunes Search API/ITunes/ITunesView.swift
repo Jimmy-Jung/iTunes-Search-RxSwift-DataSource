@@ -10,7 +10,9 @@ import SnapKit
 
 final class ITunesView: UIView {
     
-    let tableView = UITableView()
+    let tableView = UITableView().builder
+        .rowHeight(UITableView.automaticDimension)
+        .build()
     
     override init(frame: CGRect) {
         super.init(frame: frame)

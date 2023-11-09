@@ -18,7 +18,7 @@ struct ITunesService: ITunesServiceProtocol {
     func fetchITunesData(with term: String) -> Observable<ITunseResults> {
         return Observable.create { observer in
             // Alamofire를 사용하여 네트워크 요청 수행
-            AF.request("https://itunes.apple.com/search?term=\(term)&entity=software&country=kr").responseDecodable(of: ITunseResults.self) { response in
+            AF.request("https://itunes.apple.com/search?term=\(term)&entity=software&country=kr".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "").responseDecodable(of: ITunseResults.self) { response in
                 switch response.result {
                 case .success(let results):
                     observer.onNext(results)
