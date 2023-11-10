@@ -40,20 +40,12 @@ final class ITunesViewModel: ViewModelType {
         return iTunesService.fetchITunesData(with: term)
     }
     
+    let iTunesList = PublishSubject<ITunseResults>()
+    let searchBarPlaceHolder = PublishRelay<String>()
+    
     func transform(input: Input) -> Output {
-        let iTunesList = PublishSubject<ITunseResults>()
-        let searchBarPlaceHolder = PublishRelay<String>()
+        
         fetchITunesDateWhenSearchButtonTapped(input: input)
-            .subscribe(
-                with: self,
-                onNext: { owner, value in
-                    iTunesList.onNext(value)
-                },
-                onError: { owner, error in
-                    print(error.localizedDescription)
-                }
-            )
-            .disposed(by: disposeBag)
         
         input
             .searchBarText
@@ -66,12 +58,21 @@ final class ITunesViewModel: ViewModelType {
         
     }
     
-    func fetchITunesDateWhenSearchButtonTapped(input: Input) -> Observable<ITunseResults> {
-        return Observable.combineLatest(input.searchButtonTapped, input.searchBarText)
+    func fetchITunesDateWhenSearchButtonTapped(input: Input) {
+        input.searchButtonTapped
+            .withLatestFrom(input.searchBarText)
             .withUnretained(self)
             .flatMap { owner, value in
                 print(value)
-                return owner.iTunesService.fetchITunesData(with: value.1)
+                return owner.iTunesService.fetchITunesData(with: value)
             }
+            .subscribe(with: self,
+                onNext: { owner, value in
+                    owner.iTunesList.onNext(value)
+            },
+            onError: { owner, error in
+                print(error.localizedDescription)
+            })
+            .disposed(by: disposeBag)
     }
 }

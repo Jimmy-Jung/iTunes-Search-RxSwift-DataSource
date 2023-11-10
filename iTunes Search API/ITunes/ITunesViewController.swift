@@ -54,10 +54,8 @@ class ITunesViewController: UIViewController {
                 )
         
         let output = iTunesviewModel.transform(input: input)
-        
         output.items
             .map {
-                print($0)
                 return [ITunesModel(items: $0.results)]
             }
             .bind(to: iTunesView.tableView.rx.items(dataSource: datasource))
